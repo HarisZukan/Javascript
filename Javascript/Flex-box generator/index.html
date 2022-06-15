@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Flex box generator</title>
+</head>
+<body>
+    <div class="outer-wrap">
+        <div class="header">
+            <h1><img src="https://the-echoplex.net/flexyboxes/images/flexy-boxes.svg" alt="flex-title"></h1>
+            <p>flexbox playground and code generator</p>
+        </div>
+        <div class="main">
+           <div id="flex-container" style="display: flex;
+           flex-direction: row;
+           flex-wrap: nowrap;
+           justify-content:flex-start ;
+           align-items: flex-start;
+           align-content: flex-start;" class=" flex-container-style flex-container-height">
+               <div id="box1" class="box"><span class="change-number">1</span> </div>
+               <div id="box2" class="box"><span class="change-number">2</span> </div>
+               <div id="box3" class="box"><span class="change-number">3</span> </div>
+           </div>
+
+           
+           
+        </div>
+        <div class="control-box flex-container-style">
+            <form action="">
+                <div class="flex-container-desc">
+                    <h2 class="title">flex container</h2>
+                    <label  for="">
+                        display:</label>
+                        <select class="width-select" name="" id='flex-select' onchange="displayFlex()">
+                            <option value="flex" class="change-option">flex</option>
+                            <option value="inline-flex"  class="change-option">inline-flex</option>
+                        </select>
+                    
+
+                    <label class="label-margin" for="">
+                       flex-direction:</label>
+                        <select class="width-select" name="" id="flex-direction"  onchange="displaydirection()">
+                            <option value="row" class="change-option">row</option>
+                            <option value="row-reverse" class="change-option">row-reverse</option>
+                            <option value="column" class="change-option">column</option>
+                            <option value="column-reverse" class="change-option">column-reverse</option>
+                        </select>
+
+                        <label class="label-margin" for="">
+                            flex-wrap:</label>
+                             <select class="width-select" name="" id="flex-wrap" onchange="flexWrapp()">
+                                 <option value="nowrap" class="change-option">nowrap</option>
+                                 <option value="wrap" class="change-option">wrap</option>
+                                 <option value="wrap-reverse" class="change-option">wrap-reverse</option>
+                                 
+                             </select>
+
+                             <label class="label-margin" for="">
+                                justify-content:</label>
+                                 <select class="width-select" name="" id="justify" onchange="justifyCont()">
+                                     <option value="flex-start" class="change-option">flex-start</option>
+                                     <option value="flex-end" class="change-option">flex-end</option>
+                                     <option value="center" class="change-option">center</option>
+                                     <option value="space-between" class="change-option">space-between</option>
+                                     <option value="space-around" class="change-option">space-around</option>
+                                     
+                                 </select>
+
+                                 <label class="label-margin" for="">
+                                    align-items:</label>
+                                     <select class="width-select" name="" id="align" onchange="alignItemss()">
+                                         <option value="flex-start" class="change-option">flex-start</option>
+                                         <option value="flex-end" class="change-option">flex-end</option>
+                                         <option value="center"  class="change-option">center</option>
+                                         <option value="baseline" class="change-option">baseline</option>
+                                         <option value="stretch" class="change-option">stretch</option>
+                                         
+                                     </select>
+
+                                     <label class="label-margin" for="" >
+                                        align-content:</label>
+                                         <select class="width-select" name="" id="align-content" onchange="alignCont()">
+                                             <option value="flex-start" class="change-option">flex-start</option>
+                                             <option value="flex-end" class="change-option">flex-end</option>
+                                             <option value="center" class="change-option">center</option>
+                                             <option value="space-between" class="change-option">space-between</option>
+                                             <option value="space-around" class="change-option">space-around</option>
+                                             <option value="stretch" class="change-option">stretch</option>
+                                             
+                                         </select>
+
+                                     
+                    
+                </div>
+            </form>
+
+            <form action="">
+                <div class="flex-container-items">
+                  <h2 class="title">flex items</h2>
+                  <div class="flex-container-items flex-container-style-items ">
+                    <div class="box-items"><span class="change-number">1</span>
+                        
+
+                           
+
+                            <label class="label-items" for="">
+                                align-self:</label>
+                                 <select class="width-select" name="" id="align-self1" onchange="alignSelf1()">
+                                     <option value="auto" class="change-option">auto</option>
+                                     <option value="flex-start" class="change-option">flex-start</option>
+                                     <option value="flex-end" class="change-option">flex-end</option>
+                                     <option value="center" class="change-option">center</option>
+                                     <option value="baseline" class="change-option">baseline</option>
+                                     <option value="stretch" class="change-option">stretch</option>
+                                     
+                                 </select>
+                             
+                    
+                    </div>
+                    <div class="box-items"><span class="change-number">2</span>
+                        
+ 
+                             <label class="label-items" for="">
+                                 align-self:</label>
+                                  <select class="width-select" name="" id="align-self2" onchange="alignSelf2()">
+                                      <option value="auto" class="change-option">auto</option>
+                                      <option value="flex-start" class="change-option">flex-start</option>
+                                      <option value="flex-end" class="change-option">flex-end</option>
+                                      <option value="center" class="change-option">center</option>
+                                      <option value="baseline" class="change-option">baseline</option>
+                                      <option value="stretch" class="change-option">stretch</option>
+                                      
+                                  </select>
+                    </div>
+                    <div class="box-items"><span class="change-number">3</span>
+                        
+ 
+                             <label class="label-items" for="">
+                                 align-self:</label>
+                                  <select class="width-select" name="" id="align-self3" onchange="alignSelf3()">
+                                    <option value="auto" class="change-option">auto</option>
+                                    <option value="flex-start" class="change-option">flex-start</option>
+                                    <option value="flex-end" class="change-option">flex-end</option>
+                                    <option value="center" class="change-option">center</option>
+                                    <option value="baseline" class="change-option">baseline</option>
+                                    <option value="stretch" class="change-option">stretch</option>
+                                      
+                                  </select>
+                                  </div>
+                    
+                           </div>
+                         </div>
+                     </div>
+                
+            </form>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
