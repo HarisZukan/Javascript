@@ -1,0 +1,24 @@
+.bg-color{
+    background-color: #3b3939;
+    height: 180px;
+    border-radius: 50px;
+}
+
+.bg-card{
+    background-color: #3b3939;
+   
+    border-radius: 15px;
+}
+
+#movies .col-md-4 .well{
+    height: 390px;
+}
+#movies .col-md-4 img{
+    height: 240px;
+    
+    
+}
+
+.bg-mdb{
+    background-color: #3b3939;
+}
